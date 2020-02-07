@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/btm_sheet_container"
+    android:visibility="gone"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:behavior_peekHeight="115dp"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    android:background="@color/appBackground"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/player_height"
+        android:id="@+id/player_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_play_pause"/>
+
+    <ImageView
+        android:id="@+id/img_play_pause"
+        android:padding="@dimen/margin_16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_62dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/player_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/player_container"
+        tools:src="@drawable/ic_play" />
+
+    <ImageView
+        android:id="@+id/img_hide"
+        android:padding="@dimen/margin_16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_24dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/player_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toTopOf="@id/player_container"
+        tools:src="@drawable/ic_cancel" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Subhead"
+        android:id="@+id/txt_title"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        tools:text="hello"
+        app:layout_constraintTop_toBottomOf="@+id/player_container"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="@dimen/margin_16dp"
+        />
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_description"
+        tools:text="hello again"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title"
+        app:layout_constraintLeft_toLeftOf="@+id/txt_title"
+        app:layout_constraintRight_toRightOf="@+id/txt_title"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="4dp" />
+</android.support.constraint.ConstraintLayout>

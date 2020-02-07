@@ -1,0 +1,79 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cl_content"
+    android:clickable="true"
+    android:paddingBottom="@dimen/margin_8dp"
+    android:layout_marginTop="@dimen/margin_8dp"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/img_detail"
+        android:layout_width="0dp"
+        android:layout_height="202dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/txt_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/round_textview_duration"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="0:00"
+        android:textColor="@color/appBackground"
+        style="@style/TextSmall"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/img_detail"
+        app:layout_constraintEnd_toEndOf="@+id/img_detail"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/img_detail"
+        app:layout_constraintTop_toTopOf="@+id/img_detail"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Subhead"
+        android:id="@+id/txt_title"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/img_detail"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_channel"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title"
+        app:layout_constraintLeft_toLeftOf="@+id/txt_title"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="4dp" />
+
+</android.support.constraint.ConstraintLayout>

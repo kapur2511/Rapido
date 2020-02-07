@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 21-Dec-2018 Cricbuzz.com
+  ~ All rights reserved.
+  ~
+  ~ http://www.cricbuzz.com
+  ~ @author: kshitiz.kapur
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/colorPrimaryDark"/>
+    <corners android:radius="3dp"/>
+</shape>
